@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cinzel", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Pirate Theme Light Mode Colors */
+  --color-navy-950: #FAF5E6; /* Main antique parchment background */
+  --color-navy-900: #F3EAD3; /* Slightly deeper parchment for headers/cards */
+  --color-navy-850: #E7D9B8; /* Warm paper accent / active tabs */
+  
+  --color-slate-50: #ffffff;
+  --color-slate-100: #2C1A04; /* Dark roasted coffee text for supreme contrast */
+  --color-slate-200: #3E2B15; /* Secondary headers */
+  --color-slate-300: #55412A; /* Muted brown body text */
+  --color-slate-400: #745F46; /* Lighter details */
+  --color-slate-500: #8F7A61; /* Subtitles and timestamps */
+  --color-slate-600: #A8957B;
+  --color-slate-700: #BDAC94;
+  --color-slate-800: #D8C5A2; /* Aged line borders */
+  --color-slate-900: #EADDBB; /* Block background */
+  --color-slate-950: #FAF6EA; /* Card paper color */
+
+  --color-black: #1E1001; /* Rich cocoa dark instead of pitch black */
+  --color-white: #FCF9ED; /* Aged cream ivory paper instead of plain white */
+
+  /* Gold & Crimson Nautical Accents */
+  --color-gold-400: #C2921A; /* Classic antique brass gold */
+  --color-gold-500: #9A7010; /* Darker warm brass gold */
+  --color-red-400: #C22F2F; /* Pirate red bounty color */
+  --color-red-500: #9E1A1A;
+  --color-red-600: #801313;
+  
+  --color-purple-400: #8B5CF6;
+  --color-purple-500: #7C3AED;
+}
+
+/* Custom styles and premium game effects */
+@layer utilities {
+  .text-glow-gold {
+    text-shadow: 0 1px 1px rgba(44, 26, 4, 0.15), 0 0 6px rgba(194, 146, 26, 0.3);
+  }
+  .text-glow-crimson {
+    text-shadow: 0 1px 1px rgba(44, 26, 4, 0.15), 0 0 6px rgba(158, 26, 26, 0.3);
+  }
+  .glass-card {
+    background: rgba(254, 252, 244, 0.92);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(154, 112, 16, 0.22);
+    box-shadow: 0 4px 18px rgba(44, 26, 4, 0.04);
+  }
+  .glass-card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .glass-card-hover:hover {
+    background: rgba(248, 240, 219, 0.96);
+    border-color: rgba(194, 146, 26, 0.45);
+    box-shadow: 0 8px 30px rgba(154, 112, 16, 0.1);
+  }
+  .gold-border {
+    border: 2px solid;
+    border-image: linear-gradient(to bottom, #C2921A, #9A7010, #7A5308) 1;
+  }
+  .parchment-bg {
+    background: radial-gradient(circle, #FCF9ED 0%, #FAF5E6 50%, #EADDBB 100%);
+    color: #2C1A04;
+  }
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF6EA;
+  border-left: 1px solid rgba(154, 112, 16, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(194, 146, 26, 0.25);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(194, 146, 26, 0.55);
+}
+
+/* Smooth background wave movement */
+@keyframes wave-bg {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+.animated-ocean-bg {
+  background: linear-gradient(-45deg, #FAF5E6, #F3EAD3, #E7D9B8, #FCF9ED);
+  background-size: 400% 400%;
+  animation: wave-bg 15s ease infinite;
+}
+
+/* Glowing particles or waves */
+.map-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(194, 146, 26, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(194, 146, 26, 0.05) 1px, transparent 1px);
+}

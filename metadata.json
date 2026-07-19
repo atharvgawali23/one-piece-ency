@@ -1,0 +1,6 @@
+{
+  "name": "One Piece Encyclopedia",
+  "description": "Everything about the Grand Line. A premium, modern, interactive One Piece database featuring characters, crews, devil fruits, islands, story arcs, interactive timeline, world map, and custom bounties in a beautiful high-fidelity gaming aesthetic.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
